@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
-</head>
-<body>
-    <h2>Login</h2>
-    <form method="post" action="{% url 'login' %}">
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="p-4 mx-auto shadow-small bg-body rounded" style="margin-top: 50%;">
+      <h1 class="d-flex justify-content-center mb-4">Form Login Siswa</h1>
+      <form class="" method="post" action="{% url 'login' %}">
         {% csrf_token %}
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required><br>
+        <label for="username">NIS</label>
+        <input class="form-control" type="text" name="username" id="username" placeholder="Masukkan NIS" autofocus="true" required>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br>
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" type="password" name="password" id="password" placeholder="Masukkan Password" required>
 
-        <input type="submit" value="Login">
-    </form>
-</body>
-</html>
+        <input type="submit" value="Login" class="btn btn-secondary py-2 px-4 mt-4">
+      </form>
+    </div>   
+{% endblock content %}

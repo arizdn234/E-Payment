@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, HttpResponse
 
 def signin(request):
+    context = {'title': 'Halaman Login Siswa'}
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
