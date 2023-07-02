@@ -1,0 +1,26 @@
+<form action="" method="post">
+  {% csrf_token %}
+  <h3>Signup Here</h3>
+
+  <label for="username">Username</label>
+  <input type="text" placeholder="Username" name="username" id="username" />
+
+  <label for="password1">Password</label>
+  <input
+    type="password"
+    placeholder="Type Your Password"
+    id="password1"
+    name="password1"
+  />
+
+  <label for="password2">Retype Password</label>
+  <input
+    type="password"
+    placeholder="Retype Password"
+    id="password2"
+    name="password2"
+  />
+  <button type="submit">Signup</button>
+
+  <a href="{% url 'login' %}">i have already account</a>
+</form>
